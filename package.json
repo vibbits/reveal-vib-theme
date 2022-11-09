@@ -1,0 +1,22 @@
+{
+  "name": "@vibbioinfocore/reveal-vib-theme",
+  "version": "1.0.0",
+  "description": "A VIB theme for reveal.js",
+  "main": "dist/reveal-vib-theme.css",
+  "scripts": {
+    "build": "mkdir -p dist/; sass src/vib-theme.scss > dist/reveal-vib-theme.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibbits/reveal-vib-theme.git"
+  },
+  "author": "VIB Bioinformatics Core Facility",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vibbits/reveal-vib-theme/issues"
+  },
+  "homepage": "https://github.com/vibbits/reveal-vib-theme#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

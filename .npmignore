@@ -10,5 +10,6 @@
 # Javascript / npm
 node_modules/
 
-# Build
-dist/
+# Source
+src/
+.gitmodules

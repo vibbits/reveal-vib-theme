@@ -1,0 +1,60 @@
+/**
+ * VIB Slides theme for reveal.js
+ *
+ * Copyright 2022 VIB (https://vib.be)
+ */
+
+// VIB CSS ---------------------------------------
+@use "./vib-css/scss/_base" as base;
+@use "./vib-css/scss/mixins" as vib;
+// -----------------------------------------------
+
+// Default mixins and settings -------------------
+@import "./reveal.js/css/theme/template/mixins";
+@import "./reveal.js/css/theme/template/settings";
+// -----------------------------------------------
+
+// VIB Theme settings ----------------------------
+@mixin bodyBackground() {
+  background-position: right;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap");
+
+$mainFont: base.$vib-font;
+$headingFont: base.$vib-dense-bold-font;
+$headingColor: base.$vib-blue;
+
+svg#science-meets-life {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 400px;
+  height: 60px;
+}
+
+svg#science-meets-life text {
+  font-family: base.$vib-dense-font;
+  font-size: 4rem;
+  font-weight: bold;
+  fill: var(--r-heading-color);
+}
+
+svg#vib-logo {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 3;
+}
+
+svg#vib-logo text {
+  font-family: "Reem Kufi Fun";
+  font-size: 5rem;
+  font-weight: 600;
+  fill: var(--r-heading-color);
+}
+// -----------------------------------------------
+
+// Theme template --------------------------------
+@import "./reveal.js/css/theme/template/theme";
+// -----------------------------------------------
