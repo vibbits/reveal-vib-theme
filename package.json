@@ -1,6 +1,6 @@
 {
   "name": "@vibbioinfocore/reveal-vib-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A VIB theme for reveal.js",
   "main": "dist/reveal-vib-theme.css",
   "scripts": {
