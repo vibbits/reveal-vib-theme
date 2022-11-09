@@ -1,0 +1,40 @@
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+name: Release Workflow
+
+jobs:
+  build:
+    name: Release build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install build dependencies
+        run: npm ci
+
+      - name: Build theme
+        run: npm run build
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+          prerelease: false
+          draft: true
+          files: |
+            dist/reveal-vib-theme.css
+
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: "public"

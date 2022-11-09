@@ -13,3 +13,4 @@ node_modules/
 # Source
 src/
 .gitmodules
+.github/
