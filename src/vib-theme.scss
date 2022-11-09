@@ -25,6 +25,11 @@ $mainFont: base.$vib-font;
 $headingFont: base.$vib-dense-bold-font;
 $headingColor: base.$vib-blue;
 
+:root {
+  --r-selection-color: base.$vib-blue;
+  --r-main-color: base.$vib-blue;
+}
+
 svg#science-meets-life {
   position: absolute;
   left: 50px;
