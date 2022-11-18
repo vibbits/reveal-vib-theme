@@ -30,19 +30,36 @@ $headingColor: base.$vib-blue;
   --r-main-color: base.$vib-blue;
 }
 
-svg#science-meets-life {
+@mixin science-meets-life {
   position: absolute;
+  font-family: base.$vib-dense-font;
+  font-weight: bold;
+}
+
+svg.science-meets-life-title {
+  @include science-meets-life;
   left: 50px;
   top: 50px;
   width: 400px;
   height: 60px;
 }
 
-svg#science-meets-life text {
-  font-family: base.$vib-dense-font;
+svg.science-meets-life-title text {
   font-size: 4rem;
-  font-weight: bold;
   fill: var(--r-heading-color);
+}
+
+svg.science-meets-life-default {
+  @include science-meets-life;
+  right: 50px;
+  bottom: 50px;
+  width: 400px;
+  height: 60px;
+}
+
+svg.science-meets-life-default text {
+  font-size: 3rem;
+  fill: base.$vib-blue;
 }
 
 svg#vib-logo {
